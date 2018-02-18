@@ -1,0 +1,23 @@
+.mainFxmlClass {
+    -fx-background-color: #5E5C3C;
+}
+
+.pane{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-border-color: #404040;
+    -fx-border-width: 3;
+    -fx-border-radius: 15;
+}
+
+.button-green{
+    -fx-background-color: #5cb607;
+    -fx-background-radius: 0;
+    -fx-text-fill: #000000;
+}
+
+.button-red{
+    -fx-background-color: #f8310d;
+    -fx-background-radius: 0;
+    -fx-text-fill: #ffffff;
+}

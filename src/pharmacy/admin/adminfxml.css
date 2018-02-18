@@ -1,0 +1,78 @@
+.mainFxmlClass {
+    -fx-background-color: #2A769D;
+}
+
+.button:hover{
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.textfield{
+    -fx-background-color: #FDFDFD;
+    -fx-background-radius: 0;
+}
+
+.button-user{
+    -fx-background-size: 80;
+    -fx-background-radius: 70;
+    -fx-border-radius: 70;
+    -fx-border-width: 2;
+    -fx-border-color: #FEFEFE;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../icons/128/doctor_2.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button-drug{
+    -fx-background-size: 80;
+    -fx-background-radius: 70;
+    -fx-border-radius: 70;
+    -fx-border-width: 2;
+    -fx-border-color: #FEFEFE;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../icons/128/drugs3.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button-supplier{
+    -fx-background-size: 80;
+    -fx-background-radius: 70;
+    -fx-border-radius: 70;
+    -fx-border-width: 2;
+    -fx-border-color: #FEFEFE;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../icons/128/hotel-supplier.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button-info{
+    -fx-background-size: 80;
+    -fx-background-radius: 70;
+    -fx-border-radius: 70;
+    -fx-border-width: 2;
+    -fx-border-color: #FEFEFE;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../icons/128/cart.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button-quit{
+    -fx-background-size: 35;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-width: 1;
+    -fx-border-color: #FEFEFE;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-background-image: url("../icons/shutdown.png"); 
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}

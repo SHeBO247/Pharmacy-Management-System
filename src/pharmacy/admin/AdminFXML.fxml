@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #808080;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.admin.AdminFXMLController">
+    <stylesheets>
+        <URL value="@adminfxml.css" />
+    </stylesheets>
+   <children>
+      <JFXButton alignment="CENTER" focusTraversable="false" layoutX="465.0" layoutY="126.0" onAction="#openUsers" prefHeight="130.0" prefWidth="130.0" styleClass="button-user" stylesheets="@adminfxml.css" text=" " textAlignment="CENTER">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton focusTraversable="false" layoutX="753.0" layoutY="126.0" onAction="#openDrugs" prefHeight="130.0" prefWidth="130.0" styleClass="button-drug" stylesheets="@adminfxml.css" text=" ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton focusTraversable="false" layoutX="465.0" layoutY="361.0" onAction="#openSuppliers" prefHeight="130.0" prefWidth="130.0" styleClass="button-supplier" stylesheets="@adminfxml.css" text=" ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton focusTraversable="false" layoutX="753.0" layoutY="361.0" onAction="#openInfos" prefHeight="130.0" prefWidth="130.0" styleClass="button-info" stylesheets="@adminfxml.css" text=" ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Pane prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: #FDFDFD;">
+         <children>
+            <Pane prefHeight="140.0" prefWidth="320.0" style="-fx-background-color: #606060;">
+               <children>
+                  <JFXButton layoutX="16.0" layoutY="16.0" onAction="#logOut" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #15FF15; -fx-background-radius: 0; -fx-cursor: hand;" text="Log Out">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXTextField fx:id="user_id" editable="false" focusColor="WHITE" focusTraversable="false" layoutX="25.0" layoutY="271.0" prefHeight="35.0" prefWidth="270.0" style=": ;" styleClass="textfield" stylesheets="@adminfxml.css" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_fullname" editable="false" focusColor="WHITE" focusTraversable="false" layoutX="25.0" layoutY="341.0" prefHeight="35.0" prefWidth="270.0" style=": ;" styleClass="textfield" stylesheets="@adminfxml.css" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_address" editable="false" focusColor="WHITE" focusTraversable="false" layoutX="25.0" layoutY="413.0" prefHeight="35.0" prefWidth="270.0" style=": ;" styleClass="textfield" stylesheets="@adminfxml.css" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_phone" editable="false" focusColor="WHITE" focusTraversable="false" layoutX="25.0" layoutY="485.0" prefHeight="35.0" prefWidth="270.0" style=": ;" styleClass="textfield" stylesheets="@adminfxml.css" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_salary" editable="false" focusColor="WHITE" focusTraversable="false" layoutX="25.0" layoutY="553.0" prefHeight="35.0" prefWidth="270.0" style=": ;" styleClass="textfield" stylesheets="@adminfxml.css" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="102.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/512/doctor.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="username" layoutX="122.0" layoutY="201.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="246.0" prefHeight="25.0" prefWidth="30.0" style="-fx-border-width: 1 1 1 0;" text="ID">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="316.0" prefHeight="25.0" prefWidth="50.0" style="-fx-border-width: 1 1 1 0;" text="Name">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="388.0" prefHeight="25.0" prefWidth="62.0" style="-fx-border-width: 1 1 1 0;" text="Address">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="460.0" prefHeight="25.0" prefWidth="62.0" style="-fx-border-width: 1 1 1 0;" text="Phone">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="528.0" prefHeight="25.0" prefWidth="62.0" style="-fx-border-width: 1 1 1 0;" text="Salary">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="499.0" layoutY="271.0" text="Users" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="784.0" layoutY="271.0" text="Drugs" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="766.0" layoutY="504.0" text="Information" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="478.0" layoutY="500.0" text="Suppliers" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

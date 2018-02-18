@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1300.0" style="-fx-background-color: #AE7F91;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.supplier.SupplierFXMLController">
+    <stylesheets>
+        <URL value="@supplierfxml.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="14.0" layoutY="9.0" prefHeight="450.0" prefWidth="350.0" style="-fx-background-color: #785864; -fx-background-radius: 15; -fx-border-color: #FFFFFF; -fx-border-radius: 15; -fx-border-width: 3;">
+         <children>
+            <JFXTextField fx:id="supplier_id" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="32.0" prefHeight="45.0" prefWidth="230.0" promptText="ID" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="supplier_name" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="112.0" prefHeight="45.0" prefWidth="320.0" promptText="Name" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="supplier_address" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="197.0" prefHeight="45.0" prefWidth="320.0" promptText="Address" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="supplier_phone" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="281.0" prefHeight="45.0" prefWidth="320.0" promptText="Phone" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="supplier_company" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="364.0" prefHeight="45.0" prefWidth="320.0" promptText="Company" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton focusTraversable="false" layoutX="254.0" layoutY="32.0" prefHeight="45.0" prefWidth="80.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Search">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="469.0" prefHeight="124.0" prefWidth="350.0" style="-fx-background-color: #785864; -fx-background-radius: 15; -fx-border-color: #FFFFFF; -fx-border-radius: 15; -fx-border-width: 3;">
+         <children>
+            <JFXButton focusTraversable="false" layoutX="34.0" layoutY="14.0" onAction="#AddSupplier" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Add">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="194.0" layoutY="14.0" onAction="#DeleteSupplier" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="34.0" layoutY="67.0" onAction="#EditSupplier" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Edit">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="194.0" layoutY="67.0" onAction="#Clear" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="supplierTableData" layoutX="372.0" layoutY="9.0" prefHeight="585.0" prefWidth="920.0">
+        <columns>
+          <TableColumn fx:id="supplier_id_col" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="supplier_name_col" prefWidth="304.0" text="Name" />
+            <TableColumn fx:id="supplier_address_col" prefWidth="222.0" text="Address" />
+            <TableColumn fx:id="supplier_phone_col" prefWidth="161.0" text="Phone" />
+            <TableColumn fx:id="supplier_company_col" prefWidth="157.0" text="Company" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

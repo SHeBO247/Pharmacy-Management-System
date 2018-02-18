@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1300.0" style="-fx-background-color: #404040;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.bill.BillFXMLController">
+    <stylesheets>
+        <URL value="@billfxml.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="300.0" prefHeight="600.0" prefWidth="1000.0" />
+      <Pane fx:id="pane" layoutX="300.0" prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <Pane layoutX="13.0" layoutY="13.0" prefHeight="190.0" prefWidth="300.0" style="-fx-background-color: #FDFDFD;">
+               <children>
+                  <JFXTextField fx:id="bill_id" focusTraversable="false" labelFloat="true" layoutX="20.0" layoutY="42.0" prefHeight="40.0" prefWidth="260.0" promptText="Bill ID">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <DatePicker fx:id="bill_date" focusTraversable="false" layoutX="20.0" layoutY="114.0" prefHeight="40.0" prefWidth="260.0" promptText="Bill Date" />
+               </children>
+            </Pane>
+            <Pane layoutX="690.0" layoutY="13.0" prefHeight="190.0" prefWidth="300.0" style="-fx-background-color: #FDFDFD;">
+               <children>
+                  <Label fx:id="sub_price" layoutX="166.0" layoutY="37.0" prefHeight="35.0" prefWidth="120.0" text="Sub Price">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="37.0" prefHeight="35.0" prefWidth="140.0" text="Sub Price   :">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bill_total_price" layoutX="166.0" layoutY="97.0" prefHeight="35.0" prefWidth="120.0" text="Sub Price">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="97.0" prefHeight="35.0" prefWidth="140.0" text="Total Price :">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="13.0" layoutY="220.0" prefHeight="110.0" prefWidth="980.0" style="-fx-background-color: #FDFDFD;">
+               <children>
+                  <JFXComboBox fx:id="drug_name" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="40.0" onAction="#OnComboClicked" prefHeight="35.0" prefWidth="190.0" promptText="Drug Name" />
+                  <JFXTextField fx:id="drug_amount" focusTraversable="false" labelFloat="true" layoutX="369.0" layoutY="40.0" prefHeight="35.0" prefWidth="130.0" promptText="Amount">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="drug_tabs" focusTraversable="false" labelFloat="true" layoutX="237.0" layoutY="40.0" prefHeight="35.0" prefWidth="100.0" promptText="Tabs" />
+                  <JFXTextField fx:id="drug_retail_price" focusTraversable="false" labelFloat="true" layoutX="527.0" layoutY="40.0" prefHeight="35.0" prefWidth="130.0" promptText="Retail Price">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="drug_total_price" focusTraversable="false" labelFloat="true" layoutX="675.0" layoutY="40.0" prefHeight="35.0" prefWidth="130.0" promptText="Total Price">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="845.0" layoutY="40.0" onAction="#addDrug" prefHeight="35.0" prefWidth="90.0" styleClass="button-green" text="Add">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <TableView fx:id="billTableData" layoutX="13.0" layoutY="341.0" prefHeight="250.0" prefWidth="880.0">
+              <columns>
+                  <TableColumn fx:id="bill_id_col" prefWidth="64.0" text="Bill ID" />
+                  <TableColumn fx:id="bill_date_col" prefWidth="117.0" text="Bill Date" />
+                <TableColumn fx:id="drug_name_col" prefWidth="264.0" text="Drug Name" />
+                <TableColumn fx:id="drug_tabs_col" prefWidth="98.0" text="Tabs" />
+                  <TableColumn fx:id="drug_amount_col" prefWidth="91.0" text="Amount" />
+                  <TableColumn fx:id="drug_retail_price_col" minWidth="3.0" prefWidth="135.0" text="Retail Price" />
+                  <TableColumn fx:id="drug_total_price_col" minWidth="0.0" prefWidth="116.0" text="Total Price" />
+              </columns>
+            </TableView>
+            <JFXButton layoutX="902.0" layoutY="342.0" onAction="#deleteDrug" prefHeight="35.0" prefWidth="90.0" styleClass="button-red" text="Delete">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="902.0" layoutY="401.0" onAction="#saveBill" prefHeight="35.0" prefWidth="90.0" styleClass="button-green" text="Save">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="902.0" layoutY="462.0" onAction="#closeBill" prefHeight="35.0" prefWidth="90.0" styleClass="button-green" text="Close">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="443.0" layoutY="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icons/pharmacy-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #FDFDFD;">
+         <children>
+            <Pane prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: #606060;" />
+            <Label fx:id="username" layoutX="128.0" layoutY="212.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="user_id" focusTraversable="false" layoutX="21.0" layoutY="264.0" prefHeight="30.0" prefWidth="260.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_fullname" focusTraversable="false" layoutX="21.0" layoutY="334.0" prefHeight="30.0" prefWidth="260.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_address" focusTraversable="false" layoutX="21.0" layoutY="402.0" prefHeight="30.0" prefWidth="260.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_phone" focusTraversable="false" layoutX="21.0" layoutY="472.0" prefHeight="30.0" prefWidth="260.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_salary" focusTraversable="false" layoutX="21.0" layoutY="541.0" prefHeight="30.0" prefWidth="260.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="19.0" layoutY="13.0" onAction="#logOut" prefHeight="35.0" prefWidth="90.0" styleClass="button-green" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="191.0" layoutY="13.0" onAction="#newBill" prefHeight="35.0" prefWidth="90.0" styleClass="button-green" text="New Bill">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="21.0" layoutY="242.0" text="ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="312.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="381.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="451.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="520.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="97.0" layoutY="102.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../icons/512/user%20(7).png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

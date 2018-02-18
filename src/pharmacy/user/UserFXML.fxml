@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1300.0" style="-fx-background-color: #AE7F91;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.user.UserFXMLController">
+    <stylesheets>
+        <URL value="@userfxml.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="545.0" prefWidth="350.0" style="-fx-background-color: #785864; -fx-background-radius: 15; -fx-border-color: #FFFFFF; -fx-border-width: 4; -fx-border-radius: 15;">
+         <children>
+            <JFXTextField fx:id="user_id" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="16.0" layoutY="26.0" prefHeight="40.0" prefWidth="230.0" promptText="ID" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_fullname" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="16.0" layoutY="92.0" prefHeight="40.0" prefWidth="320.0" promptText="Name" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_address" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="16.0" layoutY="159.0" prefHeight="40.0" prefWidth="320.0" promptText="Address" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_phone" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="16.0" layoutY="227.0" prefHeight="40.0" prefWidth="320.0" promptText="Phone" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_salary" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="16.0" layoutY="295.0" prefHeight="40.0" prefWidth="320.0" promptText="Salary" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_name" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="16.0" layoutY="422.0" prefHeight="40.0" prefWidth="320.0" promptText="Username" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="user_password" focusColor="WHITE" focusTraversable="false" labelFloat="true" layoutX="16.0" layoutY="491.0" prefHeight="40.0" prefWidth="320.0" promptText="Password" style="-fx-background-color: #DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton focusTraversable="false" layoutX="257.0" layoutY="26.0" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Search">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="user_type" layoutX="16.0" layoutY="359.0" prefHeight="40.0" prefWidth="320.0" promptText="User Type" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="566.0" prefHeight="108.0" prefWidth="350.0" style="-fx-background-color: #785864; -fx-background-radius: 15; -fx-border-color: #FFFFFF; -fx-border-width: 4; -fx-border-radius: 15;">
+         <children>
+            <JFXButton focusTraversable="false" layoutX="34.0" layoutY="11.0" onAction="#AddUser" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Add">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="194.0" layoutY="11.0" onAction="#DeleteUser" prefHeight="20.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="34.0" layoutY="59.0" onAction="#EditUser" prefHeight="20.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Edit">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton focusTraversable="false" layoutX="194.0" layoutY="59.0" onAction="#Clear" prefHeight="20.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="tableData" layoutX="373.0" layoutY="14.0" prefHeight="655.0" prefWidth="920.0">
+        <columns>
+          <TableColumn fx:id="user_id_col" prefWidth="52.0" text="ID" />
+          <TableColumn fx:id="user_fullname_col" prefWidth="196.0" text="Name" />
+            <TableColumn fx:id="user_address_col" prefWidth="122.0" text="Address" />
+            <TableColumn fx:id="user_phone_col" prefWidth="118.0" text="Phone" />
+            <TableColumn fx:id="user_type_col" prefWidth="101.0" text="Type" />
+            <TableColumn fx:id="user_salary_col" prefWidth="105.0" text="Salary" />
+            <TableColumn fx:id="user_name_col" prefWidth="118.0" text="Username" />
+            <TableColumn fx:id="user_password_col" prefWidth="106.0" text="Password" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

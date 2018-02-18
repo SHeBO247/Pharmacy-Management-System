@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1300.0" style="-fx-background-color: #AE7F91;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pharmacy.drug.DrugFXMLController">
+    <stylesheets>
+        <URL value="@drugfxml.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="530.0" prefWidth="350.0" style="-fx-background-color: #785864; -fx-background-radius: 15; -fx-border-color: #FFFFFF; -fx-border-radius: 15; -fx-border-width: 3;">
+         <children>
+            <JFXTextField fx:id="drug_code" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="36.0" prefHeight="35.0" prefWidth="230.0" promptText="Code" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="drug_name" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="96.0" prefHeight="35.0" prefWidth="320.0" promptText="Name" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="drug_amount" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="159.0" prefHeight="35.0" prefWidth="320.0" promptText="Amount" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="drug_tabs" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="219.0" prefHeight="35.0" prefWidth="320.0" promptText="Tabs" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="drug_retail_price" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="279.0" prefHeight="35.0" prefWidth="320.0" promptText="Retail Price" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="drug_total_price" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="339.0" prefHeight="35.0" prefWidth="320.0" promptText="Total Price" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="drug_category" layoutX="14.0" layoutY="402.0" prefHeight="35.0" prefWidth="320.0" promptText="Category" style="-fx-background-color: DDD8D8; -fx-background-radius: 0;" />
+            <JFXButton layoutX="254.0" layoutY="36.0" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Search">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <DatePicker fx:id="drug_expire_date" layoutX="14.0" layoutY="461.0" prefHeight="35.0" prefWidth="320.0" promptText="Expire Date" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="555.0" prefHeight="120.0" prefWidth="350.0" style="-fx-background-color: #785864; -fx-background-radius: 15; -fx-border-color: #FFFFFF; -fx-border-radius: 15; -fx-border-width: 3;">
+         <children>
+            <JFXButton layoutX="34.0" layoutY="21.0" onAction="#AddDrug" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Add">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="194.0" layoutY="21.0" onAction="#DeleteDrug" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="34.0" layoutY="70.0" onAction="#EditDrug" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Edit">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="194.0" layoutY="70.0" onAction="#Clear" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #BBE222; -fx-background-radius: 0;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="drugTableData" layoutX="372.0" layoutY="14.0" prefHeight="660.0" prefWidth="920.0">
+        <columns>
+          <TableColumn fx:id="drug_code_col" prefWidth="57.0" text="Code" />
+          <TableColumn fx:id="drug_name_col" prefWidth="255.0" text="Name" />
+            <TableColumn fx:id="drug_amount_col" prefWidth="82.0" text="Amount" />
+            <TableColumn fx:id="drug_tabs_col" prefWidth="74.0" text="Tabs" />
+            <TableColumn fx:id="drug_retail_price_col" prefWidth="112.0" text="Retail Price" />
+            <TableColumn fx:id="drug_total_price_col" prefWidth="85.0" text="Total Price" />
+            <TableColumn fx:id="drug_category_col" prefWidth="133.0" text="Category" />
+            <TableColumn fx:id="drug_expire_date_col" prefWidth="119.0" text="Expire Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
